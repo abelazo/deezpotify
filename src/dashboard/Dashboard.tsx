@@ -30,6 +30,9 @@ function Dashboard() {
     };
 
     const onSubmit = () => {
+        if (!inputFile.current?.files) {
+            return;
+        }
         console.log('Submit button clicked');
         console.log(inputFile.current?.files[0]);
     }
